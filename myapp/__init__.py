@@ -18,7 +18,11 @@ mysql = MySQL(app)
 
 from myapp.home.view_home import mod
 from myapp.auth.view_auth import mod
+from myapp.desk.view_desk import mod
+
 
 app.register_blueprint(home.view_home.mod)
-app.register_blueprint(auth.view_auth.mod)
+app.register_blueprint(auth.view_auth.mod,url_prefix='/auth')
+app.register_blueprint(desk.view_desk.mod)
+
 
