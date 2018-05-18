@@ -5,4 +5,4 @@ mod = Blueprint('home', __name__,template_folder='templates', static_folder='sta
 
 @mod.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('login.html')

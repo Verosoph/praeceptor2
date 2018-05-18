@@ -1,8 +1,11 @@
 .panel-login {
-    border-color: #ccc;
+	border-color: wheat;
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 5px 10px 8px #888888;
+	padding: 20px;
+	background-color: whitesmoke;
+
 }
 .panel-login>.panel-heading {
 	color: #00415d;
@@ -93,4 +96,12 @@
 	color: #fff;
 	background-color: #1CA347;
 	border-color: #1CA347;
+}
+
+.auth_container {
+	margin-top: 20%;
+}
+
+.panel-heading{
+	background-color:whitesmoke !important;
 }
