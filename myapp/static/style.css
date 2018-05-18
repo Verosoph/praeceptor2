@@ -70,15 +70,7 @@
 	background-color: #53A3CD;
 	border-color: #53A3CD;
 }
-.forgot-password {
-	text-decoration: underline;
-	color: #888;
-}
-.forgot-password:hover,
-.forgot-password:focus {
-	text-decoration: underline;
-	color: #666;
-}
+
 
 .btn-register {
 	background-color: #1CB94E;
@@ -105,3 +97,7 @@
 .panel-heading{
 	background-color:whitesmoke !important;
 }
+
+.navbar-nav > ul.navbar-right {
+    float: right !important;
+  }
