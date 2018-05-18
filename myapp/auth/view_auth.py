@@ -13,7 +13,7 @@ from passlib.hash import sha256_crypt
 from functools import wraps
 
 
-mod = Blueprint('view_auth', __name__,template_folder='templates')
+mod = Blueprint('view_auth', __name__,template_folder='templates', static_folder='static')
 
 @mod.route('/auth')
 def auth():
@@ -92,7 +92,7 @@ def login():
                 session['username'] = username
 
                 flash('You are now logged in', 'success')
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('desk.desk'))
 
 
             else:
@@ -107,8 +107,6 @@ def login():
             error = 'Username not found'
             return render_template('login.html', error=error)
 
-
-
     return render_template('login.html')
 
 
@@ -120,10 +118,8 @@ def is_logged_in(f):
             return f(*args, **kwargs)
         else:
             flash('Unauthorized, Please login', 'danger')
-            return redirect(url_for('login'))
+            return redirect(url_for('view_auth.login'))
     return wrap
-
-
 
 
 # Logout
@@ -131,4 +127,4 @@ def is_logged_in(f):
 def logout():
     session.clear()
     flash('You are logged out', 'success')
-    return redirect(url_for('login'))
+    return redirect(url_for('view_auth.login'))
