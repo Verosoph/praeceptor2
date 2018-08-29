@@ -8,6 +8,7 @@ from passlib.hash import sha256_crypt
 
 #Config MySQL
 app.config['MYSQL_HOST'] = '127.0.0.1'                  # here was a problem if you use localhost instead - always use 127.0.0.1
+app.config['MYSQL_PORT'] = '4406'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'simple'
 app.config['MYSQL_DB'] = 'myflaskapp'
